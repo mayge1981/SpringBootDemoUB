@@ -1,0 +1,26 @@
+{
+    "name":"SpringBootDemo"
+    , "build": {
+        "dockerfile": "Dockerfile"
+    }
+	, "forwardPorts": [
+		8080
+	]
+	
+	, "mounts": [
+		"source=/home/${localEnv:USER},target=/home/${localEnv:USER},type=bind,consistency=cached"
+	]
+	
+	, "customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-lombok",
+				//"Pivotal.vscode-boot-dev-pack",
+				"mutantdino.resourcemonitor"
+			]
+		}
+	}
+    
+
+}
